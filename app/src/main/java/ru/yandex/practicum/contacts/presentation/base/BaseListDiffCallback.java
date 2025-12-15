@@ -10,7 +10,6 @@ public class BaseListDiffCallback<T> extends DiffUtil.ItemCallback<T> implements
         return this.hashCode() == obj.hashCode();
     }
 
-    //При удалении метода ошибка
     @Override
     public boolean areItemsTheSame(@NonNull T oldItem, @NonNull T newItem) {
         return theSameAs(newItem);
@@ -22,7 +21,7 @@ public class BaseListDiffCallback<T> extends DiffUtil.ItemCallback<T> implements
     }
 
     @Nullable
-    //@Override //метод нужен???
+    //@Override
     public Object getChangePayload(@NonNull T oldItem, @NonNull T newItem) {
         return newItem;
     }
